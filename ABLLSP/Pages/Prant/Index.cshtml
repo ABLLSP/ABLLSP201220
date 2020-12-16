@@ -1,0 +1,62 @@
+﻿@page
+@model ABLLSP.Pages.Prant.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    //Layout = "~/Pages/_ViewImports.cshtml";
+    Layout = "_Layout";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PrantMaster[0].PrantName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrantMaster[0].PrantInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrantMaster[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrantMaster[0].UpdatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrantMaster[0].UpdatedTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.PrantMaster) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrantName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrantInfo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedTime)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.PrantId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.PrantId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.PrantId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

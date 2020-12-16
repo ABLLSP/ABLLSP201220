@@ -1,0 +1,59 @@
+﻿@page
+@model ABLLSP.Pages.Shahar.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ShaharMaster</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ShaharMaster.PrantId" class="control-label"></label>
+                <input asp-for="ShaharMaster.PrantId" class="form-control" />
+                <span asp-validation-for="ShaharMaster.PrantId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShaharMaster.ShaharName" class="control-label"></label>
+                <input asp-for="ShaharMaster.ShaharName" class="form-control" />
+                <span asp-validation-for="ShaharMaster.ShaharName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShaharMaster.ShaharInfo" class="control-label"></label>
+                <input asp-for="ShaharMaster.ShaharInfo" class="form-control" />
+                <span asp-validation-for="ShaharMaster.ShaharInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShaharMaster.Status" class="control-label"></label>
+                <input asp-for="ShaharMaster.Status" class="form-control" />
+                <span asp-validation-for="ShaharMaster.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShaharMaster.UpdatedBy" class="control-label"></label>
+                <input asp-for="ShaharMaster.UpdatedBy" class="form-control" />
+                <span asp-validation-for="ShaharMaster.UpdatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShaharMaster.UpdatedTime" class="control-label"></label>
+                <input asp-for="ShaharMaster.UpdatedTime" class="form-control" />
+                <span asp-validation-for="ShaharMaster.UpdatedTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

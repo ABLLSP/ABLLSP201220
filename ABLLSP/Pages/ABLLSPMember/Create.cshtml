@@ -1,0 +1,74 @@
+﻿@page
+@model ABLLSP.Pages.ABLLSPMember.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>AbllspmemberMaster</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AbllspmemberMaster.MemberName" class="control-label"></label>
+                <input asp-for="AbllspmemberMaster.MemberName" class="form-control" />
+                <span asp-validation-for="AbllspmemberMaster.MemberName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AbllspmemberMaster.DesignationId" class="control-label"></label>
+                <input asp-for="AbllspmemberMaster.DesignationId" class="form-control" />
+                <span asp-validation-for="AbllspmemberMaster.DesignationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AbllspmemberMaster.Address" class="control-label"></label>
+                <input asp-for="AbllspmemberMaster.Address" class="form-control" />
+                <span asp-validation-for="AbllspmemberMaster.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AbllspmemberMaster.ContactNo" class="control-label"></label>
+                <input asp-for="AbllspmemberMaster.ContactNo" class="form-control" />
+                <span asp-validation-for="AbllspmemberMaster.ContactNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AbllspmemberMaster.EmailId" class="control-label"></label>
+                <input asp-for="AbllspmemberMaster.EmailId" class="form-control" />
+                <span asp-validation-for="AbllspmemberMaster.EmailId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AbllspmemberMaster.PhotoUrl" class="control-label"></label>
+                <input asp-for="AbllspmemberMaster.PhotoUrl" class="form-control" />
+                <span asp-validation-for="AbllspmemberMaster.PhotoUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AbllspmemberMaster.Status" class="control-label"></label>
+                <input asp-for="AbllspmemberMaster.Status" class="form-control" />
+                <span asp-validation-for="AbllspmemberMaster.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AbllspmemberMaster.UpdatedBy" class="control-label"></label>
+                <input asp-for="AbllspmemberMaster.UpdatedBy" class="form-control" />
+                <span asp-validation-for="AbllspmemberMaster.UpdatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AbllspmemberMaster.UpdatedTime" class="control-label"></label>
+                <input asp-for="AbllspmemberMaster.UpdatedTime" class="form-control" />
+                <span asp-validation-for="AbllspmemberMaster.UpdatedTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

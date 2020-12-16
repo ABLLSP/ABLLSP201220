@@ -17,14 +17,28 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav flex-grow-1 nav nav-pills">
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdownMenuLink" >Structure</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-area="" asp-page="/ABLLSPMember/Index">ABLLSP</a></li>                                
+                                <li><a class="dropdown-item" asp-area="" asp-page="/Prant/Index">Prant</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="/PrantMember/Index">Prant Members</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="/Shahar/Index">Shahar</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="/ShaharMember/Index">Shahar Members</a></li>
+                            </ul>
+                        </li>
+                        
                     </ul>
+
+
+
                 </div>
             </div>
         </nav>

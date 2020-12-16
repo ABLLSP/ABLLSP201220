@@ -1,0 +1,56 @@
+﻿@page
+@model ABLLSP.Pages.Prant.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    //Layout = "~/Pages/_ViewImports.cshtml";
+    Layout = "_Layout";
+}
+
+<h1>Create</h1>
+
+<h4>PrantMaster</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PrantMaster.PrantName" class="control-label"></label>
+                <input asp-for="PrantMaster.PrantName" class="form-control" />
+                <span asp-validation-for="PrantMaster.PrantName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrantMaster.PrantInfo" class="control-label"></label>
+                <input asp-for="PrantMaster.PrantInfo" class="form-control" />
+                <span asp-validation-for="PrantMaster.PrantInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrantMaster.Status" class="control-label"></label>
+                <input asp-for="PrantMaster.Status" class="form-control" />
+                <span asp-validation-for="PrantMaster.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrantMaster.UpdatedBy" class="control-label"></label>
+                <input asp-for="PrantMaster.UpdatedBy" class="form-control" />
+                <span asp-validation-for="PrantMaster.UpdatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrantMaster.UpdatedTime" class="control-label"></label>
+                <input asp-for="PrantMaster.UpdatedTime" class="form-control" />
+                <span asp-validation-for="PrantMaster.UpdatedTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

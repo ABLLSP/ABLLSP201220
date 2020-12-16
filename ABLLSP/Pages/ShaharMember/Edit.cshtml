@@ -1,0 +1,80 @@
+﻿@page
+@model ABLLSP.Pages.ShaharMember.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ShaharMemberMaster</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ShaharMemberMaster.MemberId" />
+            <div class="form-group">
+                <label asp-for="ShaharMemberMaster.ShaharId" class="control-label"></label>
+                <input asp-for="ShaharMemberMaster.ShaharId" class="form-control" />
+                <span asp-validation-for="ShaharMemberMaster.ShaharId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShaharMemberMaster.MemberName" class="control-label"></label>
+                <input asp-for="ShaharMemberMaster.MemberName" class="form-control" />
+                <span asp-validation-for="ShaharMemberMaster.MemberName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShaharMemberMaster.DesignationId" class="control-label"></label>
+                <input asp-for="ShaharMemberMaster.DesignationId" class="form-control" />
+                <span asp-validation-for="ShaharMemberMaster.DesignationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShaharMemberMaster.Address" class="control-label"></label>
+                <input asp-for="ShaharMemberMaster.Address" class="form-control" />
+                <span asp-validation-for="ShaharMemberMaster.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShaharMemberMaster.ContactNo" class="control-label"></label>
+                <input asp-for="ShaharMemberMaster.ContactNo" class="form-control" />
+                <span asp-validation-for="ShaharMemberMaster.ContactNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShaharMemberMaster.EmailId" class="control-label"></label>
+                <input asp-for="ShaharMemberMaster.EmailId" class="form-control" />
+                <span asp-validation-for="ShaharMemberMaster.EmailId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShaharMemberMaster.PhotoUrl" class="control-label"></label>
+                <input asp-for="ShaharMemberMaster.PhotoUrl" class="form-control" />
+                <span asp-validation-for="ShaharMemberMaster.PhotoUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShaharMemberMaster.Status" class="control-label"></label>
+                <input asp-for="ShaharMemberMaster.Status" class="form-control" />
+                <span asp-validation-for="ShaharMemberMaster.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShaharMemberMaster.UpdatedBy" class="control-label"></label>
+                <input asp-for="ShaharMemberMaster.UpdatedBy" class="form-control" />
+                <span asp-validation-for="ShaharMemberMaster.UpdatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShaharMemberMaster.UpdatedTime" class="control-label"></label>
+                <input asp-for="ShaharMemberMaster.UpdatedTime" class="form-control" />
+                <span asp-validation-for="ShaharMemberMaster.UpdatedTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
