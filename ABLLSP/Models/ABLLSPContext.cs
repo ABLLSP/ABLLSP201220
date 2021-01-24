@@ -37,7 +37,7 @@ namespace ABLLSP.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=.;Trusted_Connection=true;Database=ABLLSP;");
+               optionsBuilder.UseSqlServer("Server=13.233.244.159;Trusted_Connection=false;Database=ABLLSP;User ID=abllsp201220;Password=AbLLsP@201220");
             }
         }
 
