@@ -416,6 +416,8 @@ namespace ABLLSP.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.UpdatedTime).HasColumnType("datetime");
+
+                entity.HasMany(e => e.ShaharMasters);
             });
 
             modelBuilder.Entity<ShaharMemberMaster>(entity =>
@@ -453,6 +455,9 @@ namespace ABLLSP.Models
                 entity.Property(e => e.ShaharId).HasColumnName("ShaharID");
 
                 entity.Property(e => e.UpdatedTime).HasColumnType("datetime");
+
+                entity.HasOne(e => e.ShaharDesignationMaster);
+                entity.HasOne(e => e.ShaharMaster);
             });
 
             OnModelCreatingPartial(modelBuilder);

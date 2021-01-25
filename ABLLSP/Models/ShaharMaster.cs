@@ -14,5 +14,7 @@ namespace ABLLSP.Models
         public byte Status { get; set; }
         public int? UpdatedBy { get; set; }
         public DateTime? UpdatedTime { get; set; }
+
+        public ICollection<ShaharMemberMaster> ShaharMasters { get; set; }
     }
 }

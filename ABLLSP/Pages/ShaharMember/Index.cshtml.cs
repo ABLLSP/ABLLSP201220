@@ -22,7 +22,9 @@ namespace ABLLSP.Pages.ShaharMember
 
         public async Task OnGetAsync()
         {
-            ShaharMemberMaster = await _context.ShaharMemberMasters.ToListAsync();
+            ShaharMemberMaster = await _context.ShaharMemberMasters.
+                Include(sm => sm.ShaharMaster).
+                Include(sdm => sdm.ShaharDesignationMaster).ToListAsync();
         }
     }
 }
