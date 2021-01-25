@@ -97,6 +97,8 @@ namespace ABLLSP.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.UpdatedTime).HasColumnType("datetime");
+
+                entity.HasOne(e => e.AbllspdesignationMaster);
             });
 
             modelBuilder.Entity<Event>(entity =>

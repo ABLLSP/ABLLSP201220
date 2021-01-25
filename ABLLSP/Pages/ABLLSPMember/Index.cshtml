@@ -17,7 +17,7 @@
                 @Html.DisplayNameFor(model => model.AbllspmemberMaster[0].MemberName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AbllspmemberMaster[0].DesignationId)
+                @Html.DisplayNameFor(model => model.AbllspmemberMaster[0].AbllspdesignationMaster.DesignationName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.AbllspmemberMaster[0].Address)
@@ -50,7 +50,7 @@
                 @Html.DisplayFor(modelItem => item.MemberName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DesignationId)
+                @Html.DisplayFor(modelItem => item.AbllspdesignationMaster.DesignationName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Address)
