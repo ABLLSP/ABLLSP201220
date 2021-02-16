@@ -22,7 +22,10 @@ namespace ABLLSP.Pages.ABLLSPMember
 
         public async Task OnGetAsync()
         {
-            AbllspmemberMaster = await _context.AbllspmemberMasters.ToListAsync();
+
+            
+            AbllspmemberMaster = await _context.AbllspmemberMasters.
+                Include(abllsp => abllsp.AbllspdesignationMaster).ToListAsync();
         }
     }
 }
