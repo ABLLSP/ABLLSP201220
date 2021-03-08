@@ -37,11 +37,11 @@ namespace ABLLSP.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-<<<<<<< HEAD
+//<<<<<<< HEAD
                optionsBuilder.UseSqlServer("Server=13.233.244.159;Trusted_Connection=false;Database=ABLLSP;User ID=abllsp201220;Password=AbLLsP@201220");
-=======
-                optionsBuilder.UseSqlServer("Server=13.233.244.159;Trusted_Connection=false;Database=ABLLSP;User ID=abllsp201220;Password=AbLLsP@201220");
->>>>>>> 62d2d3ae8e3be14f2d1c2d92f78626bd3ed7478c
+//=======
+                //optionsBuilder.UseSqlServer("Server=13.233.244.159;Trusted_Connection=false;Database=ABLLSP;User ID=abllsp201220;Password=AbLLsP@201220");
+//>>>>>>> 62d2d3ae8e3be14f2d1c2d92f78626bd3ed7478c
             }
         }
 
@@ -168,6 +168,10 @@ namespace ABLLSP.Models
                 entity.Property(e => e.ShaharId).HasColumnName("ShaharID");
 
                 entity.Property(e => e.UpdatedTime).HasColumnType("datetime");
+
+                entity.HasOne(e => e.ShaharMaster);
+                entity.HasMany(e => e.FamilyMemberInfos);
+
             });
 
             modelBuilder.Entity<FamilyMemberInfo>(entity =>
@@ -201,7 +205,11 @@ namespace ABLLSP.Models
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
+                //entity.Property(e => e.FamilyHeadInfo).HasColumnName("FamilyHeadInfo");
+
                 entity.Property(e => e.UpdatedTime).HasColumnType("datetime");
+
+                entity.HasOne(e => e.FamilyHeadInfo);
             });
 
             modelBuilder.Entity<MatriMonialProfile>(entity =>
@@ -423,7 +431,8 @@ namespace ABLLSP.Models
 
                 entity.Property(e => e.UpdatedTime).HasColumnType("datetime");
 
-                entity.HasMany(e => e.ShaharMasters);
+               // object p = entity.HasMany(e => e.ShaharMaster);
+                entity.HasMany(e => e.FamilyHeadInfos);
             });
 
             modelBuilder.Entity<ShaharMemberMaster>(entity =>

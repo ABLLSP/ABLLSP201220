@@ -1,0 +1,60 @@
+﻿@page
+@model ABLLSP.Pages.MatriMonialAttachment.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfileAttachment[0].ProfileId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfileAttachment[0].AttachmentUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfileAttachment[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfileAttachment[0].UpdatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfileAttachment[0].UpdatedTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.MatriMonialProfileAttachment) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfileId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttachmentUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedTime)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.AttachmentId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.AttachmentId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.AttachmentId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,160 @@
+﻿@page
+@model ABLLSP.Pages.MatriMonial.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MatriMonialProfile</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.CandidateName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.CandidateName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.FatherName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.FatherName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.MotherName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.MotherName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.SiblingInfo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.SiblingInfo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.OtherInfo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.OtherInfo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.Gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.Gender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.BirthDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.BirthDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.BirthTime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.BirthTime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.BirthPlace)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.BirthPlace)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.Height)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.Height)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.Weight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.Weight)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.ContactNo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.ContactNo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.EmailId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.EmailId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.MaritalStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.MaritalStatus)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.Education)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.Education)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.Occupation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.Occupation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.Hobbies)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.Hobbies)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.FamilyId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.FamilyId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.PhotoUrl)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.PhotoUrl)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.Status)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.UpdatedBy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.UpdatedBy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatriMonialProfile.UpdatedTime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatriMonialProfile.UpdatedTime)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="MatriMonialProfile.ProfileId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

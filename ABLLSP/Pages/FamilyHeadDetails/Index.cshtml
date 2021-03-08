@@ -1,0 +1,84 @@
+﻿@page
+@model ABLLSP.Pages.FamilyHeadDetails.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyHeadInfo[0].FamilyHeadName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyHeadInfo[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyHeadInfo[0].ContactNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyHeadInfo[0].EmailId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyHeadInfo[0].Origin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyHeadInfo[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyHeadInfo[0].UpdatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyHeadInfo[0].UpdatedTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyHeadInfo[0].ShaharMaster.ShaharName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.FamilyHeadInfo) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FamilyHeadName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Origin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShaharMaster.ShaharName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.FamilyId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.FamilyId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.FamilyId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -15,6 +15,9 @@ namespace ABLLSP.Models
         public int? UpdatedBy { get; set; }
         public DateTime? UpdatedTime { get; set; }
 
-        public ICollection<ShaharMemberMaster> ShaharMasters { get; set; }
+        public ICollection<ShaharMemberMaster> ShaharMembers { get; set; }
+
+        public ICollection<FamilyHeadInfo> FamilyHeadInfos { get; set; }
+        //public object ShaharMasters { get; internal set; }
     }
 }

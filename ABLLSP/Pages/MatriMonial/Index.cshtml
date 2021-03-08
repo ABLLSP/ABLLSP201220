@@ -1,0 +1,168 @@
+﻿@page
+@model ABLLSP.Pages.MatriMonial.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].CandidateName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].FatherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].MotherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].SiblingInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].OtherInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].BirthDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].BirthTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].BirthPlace)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].Height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].ContactNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].EmailId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].MaritalStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].Education)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].Occupation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].Hobbies)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].FamilyId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].PhotoUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].UpdatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatriMonialProfile[0].UpdatedTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.MatriMonialProfile) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CandidateName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FatherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MotherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SiblingInfo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OtherInfo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthPlace)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaritalStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Education)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Occupation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hobbies)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FamilyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhotoUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedTime)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ProfileId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ProfileId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ProfileId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

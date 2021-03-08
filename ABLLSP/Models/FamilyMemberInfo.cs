@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
@@ -18,5 +19,10 @@ namespace ABLLSP.Models
         public byte Status { get; set; }
         public long? UpdatedBy { get; set; }
         public DateTime? UpdatedTime { get; set; }
+
+        [ForeignKey("FamilyId")]
+        public FamilyHeadInfo FamilyHeadInfo { get; set; }
+
+        
     }
 }

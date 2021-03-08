@@ -1,0 +1,78 @@
+﻿@page
+@model ABLLSP.Pages.FamilyMemberDetails.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>FamilyMemberInfo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FamilyMemberInfo.FamilyId" class="control-label"></label>
+                <select asp-for="FamilyMemberInfo.FamilyId" class ="form-control" asp-items="ViewBag.FamilyId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FamilyMemberInfo.FamilyMemberName" class="control-label"></label>
+                <input asp-for="FamilyMemberInfo.FamilyMemberName" class="form-control" />
+                <span asp-validation-for="FamilyMemberInfo.FamilyMemberName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FamilyMemberInfo.Relation" class="control-label"></label>
+                <input asp-for="FamilyMemberInfo.Relation" class="form-control" />
+                <span asp-validation-for="FamilyMemberInfo.Relation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FamilyMemberInfo.Age" class="control-label"></label>
+                <input asp-for="FamilyMemberInfo.Age" class="form-control" />
+                <span asp-validation-for="FamilyMemberInfo.Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FamilyMemberInfo.Education" class="control-label"></label>
+                <input asp-for="FamilyMemberInfo.Education" class="form-control" />
+                <span asp-validation-for="FamilyMemberInfo.Education" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FamilyMemberInfo.MaritalStatus" class="control-label"></label>
+                <input asp-for="FamilyMemberInfo.MaritalStatus" class="form-control" />
+                <span asp-validation-for="FamilyMemberInfo.MaritalStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FamilyMemberInfo.Occupation" class="control-label"></label>
+                <input asp-for="FamilyMemberInfo.Occupation" class="form-control" />
+                <span asp-validation-for="FamilyMemberInfo.Occupation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FamilyMemberInfo.Status" class="control-label"></label>
+                <input asp-for="FamilyMemberInfo.Status" class="form-control" />
+                <span asp-validation-for="FamilyMemberInfo.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FamilyMemberInfo.UpdatedBy" class="control-label"></label>
+                <input asp-for="FamilyMemberInfo.UpdatedBy" class="form-control" />
+                <span asp-validation-for="FamilyMemberInfo.UpdatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FamilyMemberInfo.UpdatedTime" class="control-label"></label>
+                <input asp-for="FamilyMemberInfo.UpdatedTime" class="form-control" />
+                <span asp-validation-for="FamilyMemberInfo.UpdatedTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

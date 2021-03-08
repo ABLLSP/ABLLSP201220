@@ -1,0 +1,145 @@
+﻿@page
+@model ABLLSP.Pages.MatriMonial.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>MatriMonialProfile</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MatriMonialProfile.ProfileId" />
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.CandidateName" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.CandidateName" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.CandidateName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.FatherName" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.FatherName" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.FatherName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.MotherName" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.MotherName" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.MotherName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.SiblingInfo" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.SiblingInfo" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.SiblingInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.OtherInfo" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.OtherInfo" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.OtherInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.Gender" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.Gender" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.BirthDate" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.BirthDate" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.BirthDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.BirthTime" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.BirthTime" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.BirthTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.BirthPlace" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.BirthPlace" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.BirthPlace" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.Height" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.Height" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.Height" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.Weight" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.Weight" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.Weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.Address" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.Address" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.ContactNo" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.ContactNo" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.ContactNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.EmailId" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.EmailId" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.EmailId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.MaritalStatus" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.MaritalStatus" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.MaritalStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.Education" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.Education" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.Education" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.Occupation" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.Occupation" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.Occupation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.Hobbies" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.Hobbies" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.Hobbies" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.FamilyId" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.FamilyId" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.FamilyId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.PhotoUrl" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.PhotoUrl" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.PhotoUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.Status" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.Status" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.UpdatedBy" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.UpdatedBy" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.UpdatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatriMonialProfile.UpdatedTime" class="control-label"></label>
+                <input asp-for="MatriMonialProfile.UpdatedTime" class="form-control" />
+                <span asp-validation-for="MatriMonialProfile.UpdatedTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,90 @@
+﻿@page
+@model ABLLSP.Pages.FamilyMemberDetails.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyMemberInfo[0].FamilyMemberName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyMemberInfo[0].Relation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyMemberInfo[0].Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyMemberInfo[0].Education)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyMemberInfo[0].MaritalStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyMemberInfo[0].Occupation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyMemberInfo[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyMemberInfo[0].UpdatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyMemberInfo[0].UpdatedTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyMemberInfo[0].FamilyHeadInfo.FamilyHeadName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.FamilyMemberInfo) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FamilyMemberName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Relation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Education)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaritalStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Occupation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FamilyHeadInfo.FamilyHeadName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.FamilyMemberId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.FamilyMemberId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.FamilyMemberId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
