@@ -20,7 +20,16 @@ namespace ABLLSP
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder
+                    .ConfigureAppConfiguration((context, config) =>
+                    {
+                        var env = context.HostingEnvironment;
+                        config.AddJsonFile("appsettings.json").AddJsonFile($"appsettings.{env.EnvironmentName}.json");
+                        config.AddEnvironmentVariables();
+                        if (!env.IsDevelopment())
+                        { }
+
+                    }).UseStartup<Startup>();
                 });
     }
 }
