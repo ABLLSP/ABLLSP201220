@@ -1,15 +1,16 @@
-﻿@page
+﻿@page "{id?}"
 @model ABLLSP.Pages.MatriMonial.IndexModel
 
 @{
     ViewData["Title"] = "Index";
+    //Layout = "_Layout";
 }
 
-<h1>Index</h1>
+@*<h1>Index</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
-</p>
+</p>*@
 <table class="table">
     <thead>
         <tr>
@@ -73,7 +74,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.MatriMonialProfile[0].PhotoUrl)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.MatriMonialProfile[0].Status)
             </th>
             <th>
@@ -82,7 +83,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.MatriMonialProfile[0].UpdatedTime)
             </th>
-            <th></th>
+            <th></th>*@
         </tr>
     </thead>
     <tbody>
@@ -103,66 +104,66 @@
             <td>
                 @Html.DisplayFor(modelItem => item.OtherInfo)
             </td>
-            <td>
+            <td>                
                 @Html.DisplayFor(modelItem => item.Gender)
-            </td>
-            <td>
+             </td>
+                <td>
                 @Html.DisplayFor(modelItem => item.BirthDate)
-            </td>
-            <td>
+                </td>
+                <td>
                 @Html.DisplayFor(modelItem => item.BirthTime)
-            </td>
-            <td>
+                </td>
+                <td>
                 @Html.DisplayFor(modelItem => item.BirthPlace)
-            </td>
-            <td>
+                </td>
+                <td>
                 @Html.DisplayFor(modelItem => item.Height)
-            </td>
-            <td>
+                </td>
+                <td>
                 @Html.DisplayFor(modelItem => item.Weight)
-            </td>
-            <td>
+                </td>
+                <td>
                 @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
+                </td>
+                <td>
                 @Html.DisplayFor(modelItem => item.ContactNo)
-            </td>
-            <td>
+                </td>
+                <td>
                 @Html.DisplayFor(modelItem => item.EmailId)
-            </td>
-            <td>
+                </td>
+                <td>
                 @Html.DisplayFor(modelItem => item.MaritalStatus)
-            </td>
-            <td>
+                </td>
+                <td>
                 @Html.DisplayFor(modelItem => item.Education)
-            </td>
-            <td>
+                </td>
+                <td>
                 @Html.DisplayFor(modelItem => item.Occupation)
-            </td>
-            <td>
+                </td>
+                <td>
                 @Html.DisplayFor(modelItem => item.Hobbies)
-            </td>
-            <td>
+                </td>
+                <td>
                 @Html.DisplayFor(modelItem => item.FamilyId)
-            </td>
-            <td>
+                </td>
+                <td>
                 @Html.DisplayFor(modelItem => item.PhotoUrl)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UpdatedBy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UpdatedTime)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ProfileId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ProfileId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ProfileId">Delete</a>
-            </td>
-        </tr>
+                </td>
+                @*<td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedTime)
+        </td>
+        <td>
+            <a asp-page="./Edit" asp-route-id="@item.ProfileId">Edit</a> |
+            <a asp-page="./Details" asp-route-id="@item.ProfileId">Details</a> |
+            <a asp-page="./Delete" asp-route-id="@item.ProfileId">Delete</a>
+        </td>*@
+     </tr>
 }
     </tbody>
 </table>

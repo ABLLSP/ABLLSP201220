@@ -20,10 +20,28 @@ namespace ABLLSP.Pages.MatriMonial
 
         public IList<MatriMonialProfile> MatriMonialProfile { get;set; }
 
-        public async Task OnGetAsync()
-        {
+        //public async Task OnGetAsync()
+        //{
   
-            MatriMonialProfile = await _context.MatriMonialProfiles.ToListAsync();
+        //    MatriMonialProfile = await _context.MatriMonialProfiles.ToListAsync();
+        //}
+
+        public async Task<IActionResult> OnGetAsync(long? id)
+        {
+            if (id == null)
+            {
+                MatriMonialProfile = await _context.MatriMonialProfiles.ToListAsync();
+            }
+            else
+            {
+                MatriMonialProfile = await _context.MatriMonialProfiles.Where(mm => mm.Gender == id).ToListAsync();
+            }            
+
+            if (MatriMonialProfile == null)
+            {
+                return NotFound();
+            }
+            return Page();
         }
     }
 }

@@ -17,5 +17,7 @@ namespace ABLLSP.Models
 
         //[InverseProperty("PrantMemberMaster")]
         public ICollection<PrantMemberMaster> PrantMembers { get; set; }
+
+        public ICollection<ShaharMaster> ShaharMasters { get; set; }
     }
 }

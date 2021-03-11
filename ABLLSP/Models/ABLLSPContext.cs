@@ -351,6 +351,7 @@ namespace ABLLSP.Models
                 entity.Property(e => e.UpdatedTime).HasColumnType("datetime");
 
                 entity.HasMany(e => e.PrantMembers);
+                entity.HasMany(e => e.ShaharMasters);
             });
 
             modelBuilder.Entity<PrantMemberMaster>(entity =>
@@ -434,6 +435,7 @@ namespace ABLLSP.Models
 
                // object p = entity.HasMany(e => e.ShaharMaster);
                 entity.HasMany(e => e.FamilyHeadInfos);
+                entity.HasOne(e => e.PrantMaster);
             });
 
             modelBuilder.Entity<ShaharMemberMaster>(entity =>

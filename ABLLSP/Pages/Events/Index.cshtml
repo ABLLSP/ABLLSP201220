@@ -5,11 +5,11 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+@*<h1>Index</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
-</p>
+</p>*@
 <table class="table">
     <thead>
         <tr>
@@ -22,7 +22,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Event[0].EventType)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.Event[0].Status)
             </th>
             <th>
@@ -31,7 +31,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Event[0].UpdatedTime)
             </th>
-            <th></th>
+            <th></th>*@
         </tr>
     </thead>
     <tbody>
@@ -46,7 +46,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.EventType)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
             <td>
@@ -59,7 +59,7 @@
                 <a asp-page="./Edit" asp-route-id="@item.EventId">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.EventId">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.EventId">Delete</a>
-            </td>
+            </td>*@
         </tr>
 }
     </tbody>

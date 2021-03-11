@@ -5,11 +5,11 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+@*<h1>Index</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
-</p>
+</p>*@
 <table class="table">
     <thead>
         <tr>
@@ -34,7 +34,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.PrantMemberMaster[0].PhotoUrl)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.PrantMemberMaster[0].Status)
             </th>
             <th>
@@ -43,7 +43,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.PrantMemberMaster[0].UpdatedTime)
             </th>
-            <th></th>
+            <th></th>*@
         </tr>
     </thead>
     <tbody>
@@ -72,7 +72,7 @@
                 @*<img src="@Url.Content("~/images/PrantMembers/"+item.PhotoUrl)" alt="Image" asp-append-version="true"/>*@
                 <img src="@Url.Content("~/images/PrantMembers/"+item.PhotoUrl)" alt="Image" asp-append-version="true" />
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
             <td>
@@ -85,7 +85,7 @@
                 <a asp-page="./Edit" asp-route-id="@item.MemberId">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.MemberId">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.MemberId">Delete</a>
-            </td>
+            </td>*@
         </tr>
 }
     </tbody>

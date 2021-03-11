@@ -25,6 +25,6 @@ namespace ABLLSP.Pages.ShaharMember
             ShaharMemberMaster = await _context.ShaharMemberMasters.
                 Include(sm => sm.ShaharMaster).
                 Include(sdm => sdm.ShaharDesignationMaster).ToListAsync();
-        }
+            }
     }
 }

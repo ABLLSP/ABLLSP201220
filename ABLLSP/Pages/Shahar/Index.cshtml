@@ -5,16 +5,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+@*<h1>Index</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
-</p>
+</p>*@
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ShaharMaster[0].PrantId)
+                @Html.DisplayNameFor(model => model.ShaharMaster[0].PrantMaster.PrantName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ShaharMaster[0].ShaharName)
@@ -22,7 +22,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.ShaharMaster[0].ShaharInfo)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.ShaharMaster[0].Status)
             </th>
             <th>
@@ -31,14 +31,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.ShaharMaster[0].UpdatedTime)
             </th>
-            <th></th>
+            <th></th>*@
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.ShaharMaster) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.PrantId)
+                @Html.DisplayFor(modelItem => item.PrantMaster.PrantName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ShaharName)
@@ -46,7 +46,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ShaharInfo)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
             <td>
@@ -59,7 +59,7 @@
                 <a asp-page="./Edit" asp-route-id="@item.ShaharId">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ShaharId">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.ShaharId">Delete</a>
-            </td>
+            </td>*@
         </tr>
 }
     </tbody>
