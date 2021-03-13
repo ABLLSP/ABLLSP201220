@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*!
  * Bootstrap v5.0.0-beta2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -575,6 +575,15 @@ progress {
   border-radius: 0.25rem;
   max-width: 100%;
   height: auto;
+}
+
+.img-stamp {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-height: 100px;
+    width: auto;
 }
 
 .figure {

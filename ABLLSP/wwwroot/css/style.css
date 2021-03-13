@@ -2370,3 +2370,8 @@ section {
   font-size: 13px;
   color: #012970;
 }
+
+imgInGrid {
+    max-width: 50px;
+    max-height: 50px;
+}

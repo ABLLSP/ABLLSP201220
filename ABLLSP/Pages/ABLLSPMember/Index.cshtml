@@ -63,7 +63,8 @@
                 @Html.DisplayFor(modelItem => item.EmailId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PhotoUrl)
+                @*@Html.DisplayFor(modelItem => item.PhotoUrl)*@
+                <img src="@Url.Content("~/images/ABLLSPMembers/"+item.PhotoUrl)" alt="item.MemberName" asp-append-version="true" class="img-stamp" height="110" width="90" />
             </td>
             @*<td>
                 @Html.DisplayFor(modelItem => item.Status)
