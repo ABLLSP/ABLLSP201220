@@ -44,34 +44,34 @@
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About Us</a></li>
                     <li class="dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdownMenuLink">Structure</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" asp-area="" asp-page="/ABLLSPMember/Index">ABLLSP</a></li>
-                            <li><a class="dropdown-item" asp-area="" asp-page="/Prant/Index">Prant</a></li>
-                            <li><a class="dropdown-item" asp-area="" asp-page="/PrantMember/Index">Prant Members</a></li>
-                            <li><a class="dropdown-item" asp-area="" asp-page="/Shahar/Index">Shahar</a></li>
-                            <li><a class="dropdown-item" asp-area="" asp-page="/ShaharMember/Index">Shahar Members</a></li>
+                        <a href="#"><span>Structure</span><i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                            <li><a asp-area="" asp-page="/ABLLSPMember/Index">ABLLSP</a></li>
+                            <li><a asp-area="" asp-page="/Prant/Index">Prant</a></li>
+                            <li><a asp-area="" asp-page="/PrantMember/Index">Prant Members</a></li>
+                            <li><a asp-area="" asp-page="/Shahar/Index">Shahar</a></li>
+                            <li><a asp-area="" asp-page="/ShaharMember/Index">Shahar Members</a></li>
                             @*<li><a class="dropdown-item" asp-area="" asp-page="/MatriMonial/Index">MatriMonial</a></li>
-                <li><a class="dropdown-item" asp-area="" asp-page="/FamilyHeadDetails/Index">FamilyHeadInfo</a></li>
-                <li><a class="dropdown-item" asp-area="" asp-page="/MatriMonialAttachment/Index">MatriMonialAttachment</a></li>
-                <li><a class="dropdown-item" asp-area="" asp-page="/FamilyMemberDetails/Index">FamilyMemberInfo</a></li>*@
-                            <li><a class="dropdown-item" asp-area="" asp-page="/Events/Index">Events</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="/FamilyHeadDetails/Index">FamilyHeadInfo</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="/MatriMonialAttachment/Index">MatriMonialAttachment</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="/FamilyMemberDetails/Index">FamilyMemberInfo</a></li>*@
+                            @*<li><a class="dropdown-item" asp-area="" asp-page="/Events/Index">Events</a></li>*@
                         </ul>
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdownMenuLink">Directory</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" asp-area="" asp-page="/FamilyHeadDetails/Index">FamilyHeadInfo</a></li>
-                            <li><a class="dropdown-item" asp-area="" asp-page="/FamilyMemberDetails/Index">FamilyMemberInfo</a></li>
+                        <a href="#" id="navbarDropdownMenuLink"><span>Directory</span><i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                            <li><a asp-area="" asp-page="/FamilyHeadDetails/Index">FamilyHead Details</a></li>
+                            <li><a asp-area="" asp-page="/FamilyMemberDetails/Index">FamilyMembers Details</a></li>
                         </ul>
                     </li>
 
                     <li class="dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbarDropdownMenuLink">MatriMonial</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" asp-area="" asp-page="/MatriMonial/Index" asp-route-id="1" >Male Profiles</a></li>
-                            <li><a class="dropdown-item" asp-area="" asp-page="/MatriMonial/Index" asp-route-id="2">Female Profiles</a></li>
+                        <a href="#" id="navbarMatrimonial"><span>MatriMonial</span><i class="bi bi-chevron-right"></i></a>
+                        <ul>
+                            <li><a href="/MatriMonial?id=1" >Male Profiles</a></li>
+                            <li><a href="/MatriMonial?id=2" >Female Profiles</a></li>
                         </ul>
                     </li>
 
@@ -81,27 +81,27 @@
 
 
                     @*<li><a class="nav-link scrollto" href="#portfolio">Members</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    <li><a href="blog.html">Downloads</a></li>
-                    <li class="dropdown">
-                        <a href="#"><span>FAQs</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">FAQs</a></li>
-                            <li class="dropdown">
-                                <a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
-                        </ul>
-                    </li>*@
+                        <li><a class="nav-link scrollto" href="#team">Team</a></li>
+                        <li><a href="blog.html">Downloads</a></li>
+                        <li class="dropdown">
+                            <a href="#"><span>FAQs</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="#">FAQs</a></li>
+                                <li class="dropdown">
+                                    <a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                                    <ul>
+                                        <li><a href="#">Deep Drop Down 1</a></li>
+                                        <li><a href="#">Deep Drop Down 2</a></li>
+                                        <li><a href="#">Deep Drop Down 3</a></li>
+                                        <li><a href="#">Deep Drop Down 4</a></li>
+                                        <li><a href="#">Deep Drop Down 5</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Drop Down 2</a></li>
+                                <li><a href="#">Drop Down 3</a></li>
+                                <li><a href="#">Drop Down 4</a></li>
+                            </ul>
+                        </li>*@
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                     <li><a class="getstarted scrollto" href="#about">Login</a></li>
                 </ul>
@@ -150,12 +150,13 @@
                 </div>
             </nav>
         </header>*@
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
+    @*<section id="GridResult" class="hero d-flex align-items-center">*@
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    @*</section>*@<!-- End GridResult -->
     @*<footer class="border-top footer text-muted">
             <div class="container">
                 &copy; 2021 - ABLLSP - <a asp-area="" asp-page="/Privacy">Privacy</a>
@@ -174,11 +175,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center">
-                    <h2>जय राम जी | जय झूलेलाल | वाहेगुरु</h2>
+                    <h2>जय राम जी | जय झूलेलाल | जय हिंगलाज माँ</h2>
 
-                    <h1 data-aos="fade-up">Welcome to All India Akhil Bharat Ladi Lohana Sindhi Panchyat Community</h1>
+                    <h1 data-aos="fade-up">Welcome to Akhil Bharat Ladi Lohana Sindhi Panchayat</h1>
                     <h2 data-aos="fade-up" data-aos-delay="400">
-                        Bringing all Ladi Lohana Sindhi on a single platforms.
+                        Bringing all Ladi Lohana Sindhi on a single platform.
                         Get the member details all over india, latest updates, and many more on this platform
                     </h2>
                     <div data-aos="fade-up" data-aos-delay="600">
@@ -1333,7 +1334,7 @@
                             <img src="images/logo.png" alt="">
                             <span>FlexStart</span>
                         </a>
-                        <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+                        <p>Cras fermentum odio eu feugiat lide par naso tierra.</p>
                         <div class="social-links mt-3">
                             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
